@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORO</title>
+    <!--bootstrap cdn-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        
+    <!--cdn closes-->
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light ">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <a class="navbar-brand" href="#"><img src="./Logo.PNG"></a>
+               
+                <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav mr-auto">
+                 
+                  </ul>
+                  <span class="navbar-text mr-2">
+                   Logged in as dev@corpo.in 
+                  </span>
+                  <span class="navbar-text">
+                    <button class="btn btn-danger">Logout</button>
+                   </span>
+                </div>
+              </nav>
+        </header>
+
+        <section>
+          <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-2 bg-light users-box">
+              <div class="searchDiv bg-light">
+                <input type="text" class="inputSearch bg-light" placeholder="&#xF002; Search Partners.." style="font-family:Arial, FontAwesome">
+              </div>
+              <div id="usersDiv">
+                <!-- <div class="userDiv px-2 py-3">
+                  <div class="font-weight-bolder text-capitalize">name1</div>
+                  <div class="text-muted mr-2">OMA | hjdjd <span  style="float: right;"><i class="fa fa-chevron-circle-right"></i></span></div>
+                  <div class="text-uppercase" ><span><i class="fa fa-circle text-success" aria-hidden="true"></i></span>&nbsp;&nbsp;VISIT </div>
+                </div> -->
+               
+              </div>
+              
+            </div>
+            <div class="col-md-10 bg-light">
+              <div class="my-3">
+
+                <div class="mt-5 text-uppercase"><h5>Partner Details</h5></div>
+
+                <div class="card my-3">
+                  <div class="container-fluid card-body py-2">
+                    <div class="row">
+                      <div  class="col-md-2 col-sm-6 col-6">
+                        <span style="font-size:10px" class="text-muted text-uppercase">Name </span>
+                        <p style="font-size:10px" id="selectedUserName" class="text-capitalize">Name 1</p>
+                      </div>
+                      <div  class="col-md-2 col-sm-6 col-6">
+                        <span style="font-size:10px" class="text-muted text-uppercase">Partner Id</span>
+                        <p style="font-size:10px" id="selectedUserPartnerId">OMA537484</p>
+                      </div>
+                      <div  class="col-md-2 col-sm-6 col-6">
+                        <span style="font-size:10px" class="text-muted text-uppercase">Mobile Number </span>
+                        <p style="font-size:10px" id="selectedUserNumber">9043746555</p>
+                      </div>
+                      <div  class="col-md-2 col-sm-6 col-6">
+                        <span style="font-size:10px" class="text-muted text-uppercase">Status</span>
+                        <p style="font-size:10px" id="selectedUserStatus"><span><i class="fa fa-circle text-success" aria-hidden="true"></i></span>&nbsp;&nbsp;MDHG5354477</p>
+                      </div>
+                      <div id="callPartnerButton" class="col-md-4 col-12">
+                        <button class="btn btn-sm callPartnerBtn font-weight-bold mt-3">Call Partner</button>
+                      </div>
+                    </div>
+                  
+                </div>
+                </div>
+
+                <div class="mapDiv my-6"> 
+                  <div id="googleMap" style="width:100%;height:400px;"></div>
+                </div>
+
+                <div id="locationsDiv" class="row my-3 flex-container">
+                  
+                <!-- <div class="col-md-6">
+                  <div class="card">
+                    <div class="row card-body py-2">
+                    <div class="col-md-3">
+                      <span class="text-muted text-uppercase">STOP NO. </span>
+                      <p> 1</p>
+                    </div>
+                    <div class="col-md-3">
+                      <span class="text-muted text-uppercase">LAT</span>
+                      <p>13.7484</p>
+                    </div>
+                    <div class="col-md-3">
+                      <span class="text-muted text-uppercase">LONG </span>
+                      <p>90.46555</p>
+                    </div>
+                    <div class="col-md-3">
+                      <span class="text-muted text-uppercase">TIME</span>
+                      <p>01:36 AM</p>
+                    </div>
+                    
+                  </div>
+                  </div>
+                </div>-->
+
+
+              </div>
+              <div class="text-center sliderButtons">
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+ 
+ 
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+
+    </div>
+
+
+    <!-- Scripts -->
+    <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+
+    <!--Map Scripts -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR1o-NHwhqpY_RApbEQoX3yp5SxLpy0ds&callback=myMap"></script>
+    
+</body>
+</html>

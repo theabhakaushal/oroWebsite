@@ -1,0 +1,62 @@
+nav{
+    border-bottom:1px solid lightgrey;
+}
+.font-weight-bolder{
+    font-size: 22px;
+}
+.searchDiv{
+    
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+}
+.inputSearch{
+    border: none;
+    outline: none; 
+    padding: 10px;
+    margin: 10px 0px;
+    width: 100%;
+    
+}
+.callPartnerBtn{
+    border-radius: 10px;
+    background-color: #FFC351;
+}
+.userDiv{
+   
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    background-color: white;
+}
+
+
+#map {
+    height: 100%;
+}
+
+.prev{
+    font-size: 30px;
+}
+.next{
+        font-size: 30px;
+}
+.button-center
+{
+  text-align: center;
+}
+
+.users-box
+{
+    padding: 0;
+}
+
+@media only screen and (max-width: 900px) {
+   .userDiv{
+    border: 1px solid lightgrey;
+    margin: 12px 12px;
+    border-radius: 5px;
+   }
+
+   .searchDiv {
+       display: none;
+   }
+  }
